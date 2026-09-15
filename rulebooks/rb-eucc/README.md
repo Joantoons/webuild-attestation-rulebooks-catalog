@@ -170,33 +170,33 @@ The . notation is used in the tables of this chapter to indicate the nesting of 
 | **Data Identifier** | **Semantic Reference** | **Definition** | **Data type** | **Example value** |
 |------------------------|--------------------------|--------------|--------------|--------------|
 | attestation_legal_category | [attestationLegalCategory](https://w3id.org/ebwv#attestationLegalCategory) | One of "QEAA", "PuB-EAA" or "non-qualified-EAA", see Section 2.1 | string | QEAA |
-| legal_person_name | [legalName](https://iri.suomi.fi/terminology/webuild/legalname) | Official current legal person name as registered in the business register. | string | EUDI WALLET SOLUTIONS AS |
-| legal_person_id | [legalIdentifier](https://iri.suomi.fi/terminology/webuild/legalidentifier) | Unique ID for the legal person in the EUID structure. | string | NOFOR.987654321 |
-| legal_form_type | N/A | Legal form of the company. | string | Aksjeselskap (AS) |
-| registration_member_state | N/A | The member state where the company is registered (Alpha-2 country code). | string | NO |
+| legal_person_name | [legalName](https://w3id.org/ebwv#legalName) | Official current legal person name as registered in the business register. | string | EUDI WALLET SOLUTIONS AS |
+| legal_person_id | [legalIdentifier](https://w3id.org/ebwv#legalIdentifier) | Unique ID for the legal person in the EUID structure. | string | NOFOR.987654321 |
+| legal_form_type | [legalForm](https://w3id.org/ebwv#legalForm) | Legal form of the company. | string | Aksjeselskap (AS) |
+| registration_member_state | The registration member state information can be retrieved from the EUID. | The member state where the company is registered (Alpha-2 country code). | string | NO |
 | registered_address | [registeredAddress](https://w3id.org/ebwv#registeredAddress) | The official address of the company as registered by public authority. Optional sub-attributes are listed in [Section 2.3](#23-optional-attributes) | object | *see sub-attributes* |
 | registered_address.full_address | [fullAddress](https://w3id.org/ebwv#fullAddress) | Complete address of the company, written as a string, separated by semicolons. | string | Storgata 1; 9008; Tromsø; NO |
 | registration_date | [dateOfRegistration](https://w3id.org/ebwv#dateOfRegistration) | Date of company registration. | string (date) | 2020-05-20 |
 | legal_person_status | [legalStatus](https://w3id.org/ebwv#legalStatus) | Status of the company as defined in national law. | string | active |
 | legal_person_activity | [activity](https://w3id.org/ebwv#activity) | Main activity of the company (NACE). | object | code: 62.010, description: Computer programming activities |
-| legal_representative | N/A | Information about the natural or legal person(s) authorized to represent the company. See [section 2.4](#24-conditional-attributes). At least one is required. | array&lt;object&gt; | *see Section 2.4* |
+| legal_representative | [legalRepresentative](https://w3id.org/ebwv#legalRepresentative) | Information about the natural or legal person(s) authorized to represent the company. See [section 2.4](#24-conditional-attributes). At least one is required. | array&lt;object&gt; | *see Section 2.4* |
 
 ### 2.3 Optional attributes
 
 | **Data Identifier** | **Semantic Reference** | **Definition** | **Data type** | **Example value** |
 |------------------------|--------------------------|--------------|--------------|--------------|
 | registered_address.care_of | N/A | Used when the address is at the address of another person or legal person. | string | c/o ACME Services AS |
-| registered_address.thorough_fare | [thoroughfare](https://sanastot.suomi.fi/en/terminology/webuild/concept/thoroughfare) | The name of a passage or way through from one location to another. | string | Storgata |
-| registered_address.locator_designator | [locatorDesignator](https://iri.suomi.fi/terminology/webuild/locatordesignator) | A number or sequence that uniquely identifies the locator. | string | 1 |
-| registered_address.post_code | [postCode](https://iri.suomi.fi/terminology/webuild/postcode) | The code created and maintained for postal purposes. | string | 9008 |
-| registered_address.post_name | [postName](https://iri.suomi.fi/terminology/webuild/postname) | A name identifying a subdivision of addresses (e.g., city). | string | Tromsø |
+| registered_address.thorough_fare | [thoroughfare](https://w3id.org/ebwv#thoroughfare) | The name of a passage or way through from one location to another. | string | Storgata |
+| registered_address.locator_designator | [locatorDesignator](https://w3id.org/ebwv#locatorDesignator) | A number or sequence that uniquely identifies the locator. | string | 1 |
+| registered_address.post_code | [postCode](https://w3id.org/ebwv#postCode) | The code created and maintained for postal purposes. | string | 9008 |
+| registered_address.post_name | [postName](https://w3id.org/ebwv#postName) | A name identifying a subdivision of addresses (e.g., city). | string | Tromsø |
 | registered_address.post_office_box | [poBox](https://w3id.org/ebwv#poBox) | A location designator for a postal delivery point at a post office. | string | PO Box 123 |
-| registered_address.locator_name | N/A | Proper noun(s) applied to the real-world entity. | string | Building A |
-| registered_address.admin_unit_level_1 | [adminUnitL1](https://iri.suomi.fi/terminology/webuild/adminUnitL1) | The uppermost administrative unit (typically country). | string | NO |
-| registered_address.admin_unit_level_2 | [adminUnitL2](https://iri.suomi.fi/terminology/webuild/adminUnitL2) | Secondary level/region (typically county or state). | string | Troms |
-| share_capital | N/A | Amount of the subscribed capital with currency. Currency code used of the capital subscribed, as defined in ISO 4217:2015 | object | amount: 30000, currency: NOK |
-| legal_person_duration | N/A | Endpoint of the legal duration of the company, if it is of a limited timespan. Given as date following ISO 8601 | string (date) | 2030-12-31 |
-| digital_contact_point | N/A | Correspondence address of the company, such as electronic mail and/or website | object | website: https://www.example-eudi-wallet.no, email: post@example-eudi-wallet.no |
+| registered_address.locator_name | [locatorName](https://w3id.org/ebwv#locatorName) | Proper noun(s) applied to the real-world entity. | string | Building A |
+| registered_address.admin_unit_level_1 | [adminUnitL1](https://w3id.org/ebwv#adminUnitL1) | The uppermost administrative unit (typically country). | string | NO |
+| registered_address.admin_unit_level_2 | [adminUnitL2](https://w3id.org/ebwv#adminUnitL2) | Secondary level/region (typically county or state). | string | Troms |
+| share_capital | [subscribedCapital](https://w3id.org/ebwv#subscribedCapital) | Amount of the subscribed capital with currency. Currency code used of the capital subscribed, as defined in ISO 4217:2015 | object | amount: 30000, currency: NOK |
+| legal_person_duration | [endDate](https://w3id.org/ebwv#endDate) | Endpoint of the legal duration of the company, if it is of a limited timespan. Given as date following ISO 8601 | string (date) | 2030-12-31 |
+| digital_contact_point | [contactPoint](https://w3id.org/ebwv#contactPoint) | Correspondence address of the company, such as electronic mail and/or website | object | website: https://www.example-eudi-wallet.no, email: post@example-eudi-wallet.no |
 
 ### 2.4 Conditional attributes
 
@@ -204,11 +204,11 @@ If a Natural Person is representative of a legal person, the following attribute
 
 | **Data Identifier** | **Semantic Reference** | **Definition** | **Data type** | **Example value** |
 |------------------------|--------------------------|--------------|--------------|--------------|
-| full_name | N/A | Full name of the natural person representing the company. | string | Lysende Blomst |
-| date_of_birth | [dateOfBirth](https://w3id.org/ebwv#dateOfBirth) | Date of birth of the natural person representing the company. | string (date) | 1980-01-01 |
-| identifier | N/A | OPTIONAL: Natural person representative identifier | string | NO-01018012345 |
-| nationality | N/A | OPTIONAL: Nationality of the natural person representing the company. | string | Norwegian |
-| signatory_rule | N/A | Information on whether the representative can engage the company alone or jointly. | string | sole |
+| full_name | [Person](https://w3id.org/ebwv#Person).[fullName](https://w3id.org/ebwv#fullName) | Full name of the natural person representing the company. | string | Lysende Blomst |
+| date_of_birth | [Person](https://w3id.org/ebwv#Person).[dateOfBirth](https://w3id.org/ebwv#dateOfBirth) | Date of birth of the natural person representing the company. | string (date) | 1980-01-01 |
+| identifier | [legalRepresentativeId](https://w3id.org/ebwv#legalRepresentativeId) | OPTIONAL: Natural person representative or national identifier | string | NO-01018012345 |
+| nationality | [Person](https://w3id.org/ebwv#Person).[citizenship](https://w3id.org/ebwv#citizenship) | OPTIONAL: Nationality of the natural person representing the company. | string | Norwegian |
+| signatory_rule | [scopeOfAuthorization](https://w3id.org/ebwv#scopeOfAuthorization) | Information on whether the representative can engage the company alone or jointly. | string | sole |
 
 
 
@@ -216,10 +216,10 @@ If a Legal Person is representative of a legal person, the following attributes 
 
 | **Data Identifier** | **Semantic Reference** | **Definition** | **Data type** | **Example value** |
 |------------------------|--------------------------|--------------|--------------|--------------|
-| name | [legalName](https://iri.suomi.fi/terminology/webuild/legalname) | Details about the legal person representing the company. | string | PARENT HOLDING AS |
-| id | [legalIdentifier](https://iri.suomi.fi/terminology/webuild/legalidentifier) | Unique ID for the legal person in the EUID structure. | string | NOFOR.123456789 |
-| legal_form_type | N/A | Legal form of the legal person representing the company. | string | Aksjeselskap (AS) |
-| signatory_rule | N/A | Information on whether the representative can engage the company alone or jointly. | string | sole |
+| name | [EconomicOperator](https://w3id.org/ebwv#EconomicOperator).[legalName](https://w3id.org/ebwv#legalName) | Details about the legal person representing the company. | string | PARENT HOLDING AS |
+| id | [legalRepresentativeId](https://w3id.org/ebwv#legalRepresentativeId) | Unique ID for the legal person in the EUID structure. | string | NOFOR.123456789 |
+| legal_form_type | [EconomicOperator](https://w3id.org/ebwv#EconomicOperator).[legalForm](https://w3id.org/ebwv#legalForm) | Legal form of the legal person representing the company. | string | Aksjeselskap (AS) |
+| signatory_rule | [scopeOfAuthorization](https://w3id.org/ebwv#scopeOfAuthorization) | Information on whether the representative can engage the company alone or jointly. | string | sole |
 
 A combination of natural and legal persons can be legal representatives of a legal person.
 
@@ -227,21 +227,21 @@ A combination of natural and legal persons can be legal representatives of a leg
 
 | **Data Identifier** | **Semantic Reference** | **Definition** | **Data type** | **Example value** |
 |------------------------|--------------------------|--------------|--------------|--------------|
-| expiry_date | N/A | Date (and if possible time) when the attestation will expire. Does not need to be an atribute and can be covered by credentialformat metadata, such as for example the "exp" field on the sd-jwt format. | string (date-time) | 2027-01-15T10:00:00Z |
-| issuing_authority | N/A | Name of the administrative authority that issued the eucc, or the ISO 3166 alpha-2 country code of the respective Member State if there is no separate authority entitled to issue the EUCC. | string | Brønnøysundregistrene |
-| issuing_country | N/A | Alpha-2 country code, as specified in ISO 3166-1, of the country or territory of the provider of the person identification data. | string | NO |
+| expiry_date | [cred:validUntil](https://w3.org/2018/credentials#validUntil) | Date (and if possible time) when the attestation will expire. Does not need to be an atribute and can be covered by credentialformat metadata, such as for example the "exp" field on the sd-jwt format. | string (date-time) | 2027-01-15T10:00:00Z |
+| issuing_authority | [cred:issuer](https://w3.org/2018/credentials#issuer).[legalName](https://w3id.org/ebwv#legalName) | Name of the administrative authority that issued the eucc, or the ISO 3166 alpha-2 country code of the respective Member State if there is no separate authority entitled to issue the EUCC. | string | Brønnøysundregistrene |
+| issuing_country | [cred:issuer](https://w3.org/2018/credentials#issuer).[jurisdiction](https://w3id.org/ebwv#jurisdiction) | Alpha-2 country code, as specified in ISO 3166-1, of the country or territory of the provider of the person identification data. | string | NO |
 
 ### 2.6 Optional metadata
 
 | **Data Identifier** | **Semantic Reference** | **Definition** | **Data type** | **Example value** |
 |------------------------|--------------------------|--------------|--------------|--------------|
-| trust_anchor | N/A | This attribute indicates at least the URL at which a machine-readable version of the trust anchor to be used for verifying the EUCC can be found or looked up. *Note: This attribute corresponds to the location meant in Annex V point h) or Annex VII point h) of the [European Digital Identity Regulation], which is mandatory for QEAAs. This  Rulebook adds this as an optional attribute for EUCCs as well, so EUCC Providers are able to ensure that EUCCs can be validated by Relying Parties in the same manner as QEAAs.* | string (URI) | https://trust.example.org/anchors/eidas |
+| trust_anchor | [cred:termsOfUse](https://w3.org/2018/credentials#termsOfUse) | This attribute indicates at least the URL at which a machine-readable version of the trust anchor to be used for verifying the EUCC can be found or looked up. *Note: This attribute corresponds to the location meant in Annex V point h) or Annex VII point h) of the [European Digital Identity Regulation], which is mandatory for QEAAs. This  Rulebook adds this as an optional attribute for EUCCs as well, so EUCC Providers are able to ensure that EUCCs can be validated by Relying Parties in the same manner as QEAAs.* | string (URI) | https://trust.example.org/anchors/eidas |
 
 ### 2.7 Conditional metadata
 
 | **Data Identifier** | **Semantic Reference** | **Definition** | **Data type** | **Example value** |
 |------------------------|--------------------------|--------------|--------------|--------------|
-| location_status | N/A | The location of validity status information on the person identification data where the providers of person identification data revoke person identification data. This attribute is required when the the time validity time periode of the attestation exceeds 24 hours. | object | *see Section [3.2.1](#321-attribute-status)* |
+| location_status | [cred:credentialStatus](https://w3.org/2018/credentials#credentialStatus) | The location of validity status information on the person identification data where the providers of person identification data revoke person identification data. This attribute is required when the the time validity time periode of the attestation exceeds 24 hours. | object | *see Section [3.2.1](#321-attribute-status)* |
 
 ### 2.8 Code lists
 
@@ -356,21 +356,21 @@ Sample payloads provided under `../../data-schemas/sd-jwt/sample-data/ds004-eucc
 
 ### 3.3 W3C Verifiable Credentials Data Model-based encoding
 
-W3C Verifiable Credentials are defined using linked data (JSON-LD). Ontologies (vocabularies) are used to semantically define the different aspects of credentials including the credential subject. Validation of data structures is optional. If required, either JSON-schemes (data structure) are SHACL (data graph) can be used to validate data.
+W3C Verifiable Credentials are serialized using linked data (JSON-LD). Ontologies (vocabularies) are used to semantically define the different aspects of credentials including the credential subject. Validation of data structures is optional. If required, either JSON-schemes (data structure) are SHACL (data graph) can be used to validate data - see [Data Schemas](https://www.w3.org/TR/vc-data-model-2.0/#data-schemas).
 
 #### Metadata
-The metadata of an W3C Verifiable Credential are defined in the [Verifiable Credentials Vocabulary v2.0](https://www.w3.org/2018/credentials/). The following extensions are defined in the [European Business Wallet Vocabulary v0.1](https://ebw-vocabulary.spherity.dev/ebw/v0.1/vocabulary) in order to support Electronic Attestions of Attributes:
-* [attestationLegalCategory](https://ebw-vocabulary.spherity.dev/ebw/v0.1/vocabulary#attestationLegalCategory) in order to specify the category of the EAA (QEAA, Pub-EAA or EAA).
+The metadata of an W3C Verifiable Credential are defined in the [Verifiable Credentials Vocabulary v2.0](https://www.w3.org/2018/credentials/). The following extensions are defined in the [European Business Wallet Vocabulary](https://w3id.org/ebwv) in order to support Electronic Attestions of Attributes:
+* [attestationLegalCategory](https://w3id.org/ebwv#attestationLegalCategory) in order to specify the category of the EAA (QEAA, Pub-EAA or EAA).
 
 #### Credential Subject
 
-There are two different flavors of European Business Certificates:
-* for limit liability companies and
+There are two different flavors of European Company Certificates:
+* for limited liability companies and
 * for partnerships.
 
 Both are modeled by their own classes:
-* [EuccLimitLiabilityCompany](https://ebw-vocabulary.spherity.dev/ebw/v0.1/vocabulary#EuccLimitLiabilityCompany) - EU Company Certificate for limited liability companies
-* [EuccPartnership](https://ebw-vocabulary.spherity.dev/ebw/v0.1/vocabulary#EuccPartnership) - EU Company Certificate for partnerships 
+* [LimitedLiabilityCompany](https://w3id.org/ebwv#LimitedLiabilityCompany) - EU Company Certificate for limited liability companies
+* [Partnership](https://w3id.org/ebwv#Partnership) - EU Company Certificate for partnerships 
 
 #### Holder Binding
 
@@ -382,7 +382,7 @@ example of key binding using DID's:
 {
   "@context": [
     "https://www.w3.org/ns/credentials/v2",
-    "https://ebw-vocabulary.spherity.dev/ebw-context/v0.1"
+    "https://w3id.org/ebwv/v0.1"
   ],
   "@id": "urn:d5dfeb39-edc7-40b1-a2fc-3968dbd3eac8",
   "@type": [
@@ -391,10 +391,18 @@ example of key binding using DID's:
   ],
   "attestationLegalCategory": "QEAA",
   "credentialSubject": {
-    "@id": "did:key:$publicKeyOfHolder$", // credential subject is bound to organisation   
-    "@type": "EuccPartnership",
-    "legalIdentifier": "NOFOR.987654321",
+    "@id": "did:key:$publicKeyOfHolder$", // credential subject is bound to organisation
+    "@type": [
+      "EconomicOperator",
+      "Company",
+      "Partnership"
+    ],
+    "legalIdentifier": {
+      "@type" : "Euid",
+      "@value" : "NOFOR.987654321"
+    },
     "legalName": "acme Partnership",
+    "legalForm": "Partnership",
     "registeredAddress": {
       "@type":"Address",
       "fullAddress": "Via Appia 123, 00100 Rome, Italy",
@@ -404,23 +412,6 @@ example of key binding using DID's:
       "adminUnitL2": "Lazio",
       "postCode": "00100",
       "adminUnitL1": "IT"
-    },
-    "correspondenceAddress": {
-      "@type":"Address",
-      "fullAddress": "Via Appia 123, 00100 Rome, Italy",
-      "thoroughfare": "Via Appia",
-      "locatorDesignator": "123",
-      "postName": "Rome",
-      "adminUnitL2": "Lazio",
-      "postCode": "00100",
-      "adminUnitL1": "IT"
-    },
-    "dateOfRegistration": "2023-10-11",
-    "companyStatus": "active",
-    "economicActivity": {
-      "@type": "Nace021",
-      "naceCode": "01.12",
-      "naceDescription": "Growing of rice"
     },
     "partner": [
       {
@@ -433,12 +424,12 @@ example of key binding using DID's:
         "liabilityOrContribution": {
           "@type": "Capital",
           "amount": 100000,
-          "currency": "Euro"
+          "currency": "EUR"
         }
       },
       {
         "@type": "StatutoryPartner",
-        "partnerId": "did:key:$publicKeyOfPartner3$",
+        "partnerId": "did:key:$publicKeyOfPartner3$", // statutory partner is bound to natural person 3
         "role": "Head of HR",
         "scopeOfAuthorization": "Jointly"
       }
