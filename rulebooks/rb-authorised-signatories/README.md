@@ -167,13 +167,13 @@ This attestation type **MAY** be classified as:
 
 | **Data Identifier** | **Semantic Reference** | **Definition**                                                        | **Data type**                         |
 |---------------------|------------------------|-----------------------------------------------------------------------|---------------------------------------|
-| legal_person        | ...                    | Information about the legal person                                    | Object                                |
-| legal_identifier    | ...                    | Information about the legal person identifier                         | Object                                |
-| natural_person      | ...                    | Information about the natural person                                  | Object                                |
-| birth_place         | ...                    | Information about the birth place                                     | Object                                |
-| citizenship         | ...                    | Citizenship(s) held by the person (one or more nationalities)         | Array of Strings (ISO 3166-1 alpha-3) |
-| person_role         | ...                    | Information about the natural person role                             | Object                                |
-| identification      | ...                    | Information about the identification of the person                    | Object                                |
+| legal_person        | [EconomicOperator](https://w3id.org/ebwv#EconomicOperator)  | Information about the legal person                                    | Object                                |
+| legal_identifier    | [legalIdentifier](https://w3id.org/ebwv#legalIdentifier)  | Information about the legal person identifier                         | Object                                |
+| natural_person      | [Person](https://w3id.org/ebwv#Person) | Information about the natural person                                  | Object                                |
+| birth_place         | [placeOfBirth](https://w3id.org/ebwv#placeOfBirth)  | Information about the birth place                                     | Object                                |
+| citizenship         | [citizenship](https://w3id.org/ebwv#citizenship) | Citizenship(s) held by the person (one or more nationalities)         | Array of Strings (ISO 3166-1 alpha-3) |
+| person_role         | [role](https://w3id.org/ebwv#role) <br> property needs additional Domains and Ranges in EBWV | Information about the natural person role                             | Object                                |
+| identification      | [identifier](https://w3id.org/ebwv#identifier) <br> at the moment "identifier" is a property, but it could point to a adms:Identifier type of class; or what does "identification" actually mean in this context? | Information about the identification of the person                    | Object                                |
 
 ### 2.2 Mandatory Attributes
 
