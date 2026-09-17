@@ -351,12 +351,12 @@ The machine-readable schema artefact for this attestation is:
 
 | Format | Identifier | Schema artefact | Version | Location |
 | --- | --- | --- | --- | --- |
-| SD-JWT VC | `vct` as recorded in section 5.1 | JSON schema | 0.4.0 per its `$id` | `data-schemas/sd-jwt/ubo-sd-jwt.json` |
+| SD-JWT VC | `vct` as recorded in section 5.1 | JSON schema | 1.0.0 per its `$id` | `data-schemas/sd-jwt/ubo-sd-jwt.json` |
 
 Sample data is at `data-schemas/sd-jwt/sample-data/ubo-sd-jwt-sample.json`.
 
 > **Two points on the artefact.** It carries no `version` member, and the version in
-> its `$id` is 0.4.0 while this Rulebook is at 1.1. Those should be reconciled. The
+> its `$id` is 1.0.0 while this Rulebook is at 1.1. Those should be reconciled. The
 > schema also defines `jti`, which this Rulebook does not document.
 
 ### 3.2 Mandatory attributes
@@ -478,10 +478,10 @@ Metadata describes the attestation rather than its subject.
 
 ### 4.1 Mandatory metadata
 
-| **Data Identifier**        | **Definition**                                                                | **Data type** |
-|----------------------------|-------------------------------------------------------------------------------|---------------|
-| attestation_legal_category | Indicates the legal category of the AuthorisedSignatories Attestation ("EAA") | String        |
-| cnf                        | cryptographic Key Binding                                                                             | String        |
+| **Data Identifier**        | **Definition**                                              | **Data type** |
+|----------------------------|-------------------------------------------------------------|---------------|
+| attestation_legal_category | Indicates the legal category of the UBO Attestation ("EAA") | String        |
+| cnf                        | cryptographic Key Binding                                   | String        |
 
 *Note*: Only the additional mandatory attributes are listed; the mandatory attributes defined by the protocol are not specified.
 
@@ -896,7 +896,7 @@ Sample payloads are provided under `../data-schemas/sd-jwt/sample-data/ubo-sd-jw
 
 ### 5.2 ISO/IEC 18013-5-compliant encoding
 
-ISO/IEC 18013-5 (mdoc) is **out of scope** for this Rulebook, as offline proximity  presentation is not a current requirement for the Control Attestation.
+ISO/IEC 18013-5 (mdoc) is **out of scope** for this Rulebook, as offline proximity  presentation is not a current requirement for this attestation.
 
 ### 5.3 W3C Verifiable Credentials Data Model-based encoding
 
