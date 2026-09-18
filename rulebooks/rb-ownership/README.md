@@ -247,6 +247,7 @@ This attestation type MAY be classified as:
 These terms describe natural persons who hold ownership or economic interests in a legal entity.
 
 **Person Ownership Role Terms**
+
 	> Map Person to semantic reference [NaturalPerson](https://w3id.org/ebwv#NaturalPerson) 
 
 | **Term**                   | **Reference**                                            | **Definition in Ownership Context**                                                |
@@ -378,7 +379,7 @@ interests in another legal entity.
 |---------------------|------------------------|-------------------------------------------------------------------------------------------------|----------------|
 | `type`              | can be derived                      | Discriminator field — SHALL be `"Person"` or `"Entity"`. Determines which sub-object is present | Enum (String)  |
 | `jurisdiction`      | [jurisdiction](https://w3id.org/ebwv#jurisdiction) | Country of legal relevance for this owner entry — ISO 3166-1 alpha-2                            | String         |
-| `address`           | [domicile](https://w3id.org/ebwv#domicile).[fullAddress](https://w3id.org/ebwv#fullAddress) | Address of the owner — residential for `Person`, registered for `Entity`                        | Address Object |
+| `address`           | [domicile](https://w3id.org/ebwv#domicile).[Address](https://w3id.org/ebwv#Address) | Address of the owner — residential for `Person`, registered for `Entity`                        | Address Object |
 | `interests`         | [interests](https://w3id.org/ebwv#interests) | At least one interests record describing the ownership or control relationship                   | Array [Object] |
 | `effective_date`    | [effectiveDate](https://w3id.org/ebwv#effectiveDate) | Date when this ownership or control relationship became legally effective — ISO 8601 YYYY-MM-DD  | Date           |
 | `evidence`          | [evidence](https://w3id.org/ebwv#evidence) | At least one piece of supporting evidence substantiating the declared ownership or control       | Array [Object] |
@@ -407,7 +408,7 @@ interests in another legal entity.
 | **Data Identifier**       | **Semantic Reference** | **Definition**                                   | **Data Type** |
 |---------------------------|------------------------|--------------------------------------------------|---------------|
 | `entity.identifier.euid`  | [Euid](https://w3id.org/ebwv#Euid) | European Unique Identifier — optional            | String        |
-| `entity.identifier.lei`   | [lei](https://w3id.org/ebwv#lei) | Legal Entity Identifier per ISO 17442 — optional | String        |
+| `entity.identifier.lei`   | [Lei](https://w3id.org/ebwv#Lei) | Legal Entity Identifier per ISO 17442 — optional | String        |
 | `entity.identifier.tax`   | [Tin](https://w3id.org/ebwv#Tin) | National tax or registration number — optional   | String        |
 | `entity.identifier.other` | **'Other' is forbidden** | Any other applicable legal identifier — optional | String        |
 
@@ -437,15 +438,15 @@ interests in another legal entity.
 | `interests.type`      | Section 2.8.5          | Array of one or more role or interest types defining the ownership, control, or legal relationship — SHALL use values from Section 2.8.5 | Array [Enum] |
 | `interests.level`     | Section 2.8.2          | How the interest is held — SHALL be one of: `"direct"`, `"indirect"`, `"joint"`, or `"unknown"`                          | Enum (String) |
 | `interests.percentage`| **can be derived** | Percentage of ownership interest held — decimal value in range 0–100                                                      | Decimal       |
-| `interests.quantity`  | [ownership](https://w3id.org/ebwv#ownership).[quantity](https://w3id.org/ebwv#quantity) | Number of shares or ownership units held — SHALL be a non-negative integer                                                | Integer       |
+| `interests.quantity`  | [ownership](https://w3id.org/ebwv#ownership).[amount](https://w3id.org/ebwv#amount) | Number of shares or ownership units held — SHALL be a non-negative integer                                                | Integer       |
 | `interests.rights`    | Section 2.8.3          | Array of economic rights associated with the interest — SHALL use values from Section 2.8.3                               | Array [Enum]  |
 
 **Evidence Mandatory Attributes** *(at least one entry per Owner entry)*
 
 | **Data Identifier** | **Semantic Reference** | **Definition**                                                                          | **Data Type** |
 |---------------------|------------------------|-----------------------------------------------------------------------------------------|---------------|
-| `evidence[n].id`    | [evidence](https://w3id.org/ebwv#evidence).[id](https://w3id.org/ebwv#id) | Unique identifier, URI, or URN of the source or evidence document                       | String        |
-| `evidence[n].type`  | [evidence](https://w3id.org/ebwv#evidence).[type](https://w3id.org/ebwv#type) | Type of evidence document — SHALL use a value from Section 2.8.9                        | String        |
+| `evidence[n].id`    | TBD Please give an example. Also what is the difference with evidence.url? | Unique identifier, URI, or URN of the source or evidence document                       | String        |
+| `evidence[n].type`  | TBD | Type of evidence document — SHALL use a value from Section 2.8.9                        | String        |
 
 ### 2.3 Optional Attributes
 
