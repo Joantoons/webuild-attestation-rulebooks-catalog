@@ -260,8 +260,10 @@ explicitly in the definition, not in a footnote.
 
 ## 4 Metadata
 
-Metadata describes the attestation rather than its subject. Use the same schema
-artefacts referenced in section 3.1.
+FIXED
+
+> Metadata describes the attestation rather than its subject. Use the same schema
+> artefacts referenced in section 3.1.
 
 ### 4.1 Mandatory metadata
 
@@ -304,9 +306,11 @@ binding (EW-DM-12-032).
 
 ### 4.4 Code lists
 
-Controlled vocabularies, enumerations and value sets needed to interpret attributes
-consistently. Reference an external vocabulary wherever one exists rather than
-defining a local list.
+FIXED
+
+> Controlled vocabularies, enumerations and value sets needed to interpret attributes
+> consistently. Reference an external vocabulary wherever one exists rather than
+> defining a local list.
 
 | Field | Allowed values or vocabulary | Meaning | Source | Extensible |
 | --- | --- | --- | --- | --- |
@@ -314,8 +318,10 @@ defining a local list.
 
 ### 4.5 Integrity rules
 
-Consistency rules not captured by the schema alone: cross-field dependencies,
-temporal consistency, mutual exclusivity, conditional combinations.
+FIXED
+
+> Consistency rules not captured by the schema alone: cross-field dependencies,
+> temporal consistency, mutual exclusivity, conditional combinations.
 
 | Rule ID | Rule statement | Why it exists | Where enforced | Behaviour on failure |
 | --- | --- | --- | --- | --- |
@@ -323,8 +329,10 @@ temporal consistency, mutual exclusivity, conditional combinations.
 
 ## 5 Formats
 
-Identification only. Encoding detail lives in the schema artefacts of section 3.1,
-and the rules for using each format live in chapters 7 and 9.
+FIXED
+
+> Identification only. Encoding detail lives in the schema artefacts of section 3.1,
+> and the rules for using each format live in chapters 7 and 9.
 
 | Format | Supported | Identifier | Specification | Notes |
 | --- | --- | --- | --- | --- |
@@ -343,8 +351,10 @@ offer all of them or MAY choose.
 
 ## 6 Protocols
 
-Identification only. Substantive issuance rules are in chapter 7, presentation rules
-in chapter 9.
+FIXED
+
+> Identification only. Substantive issuance rules are in chapter 7, presentation rules
+> in chapter 9.
 
 ### 6.1 Issuance
 
