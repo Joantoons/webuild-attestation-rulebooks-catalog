@@ -1,7 +1,7 @@
 # Attestation Rulebook for attestations of type Posted Worker Notification (PWN)
 
 * Author(s):
-  * [Philipp Friedl, DRV Bund]
+  * 
   * Laurent ?
 * Previous Authors
   *
