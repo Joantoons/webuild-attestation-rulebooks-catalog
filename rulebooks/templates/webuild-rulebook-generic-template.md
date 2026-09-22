@@ -26,7 +26,7 @@ leave it alone. Strip all three before submission to the EC catalogue.
    * [1.2 Document structure](#12-document-structure)
    * [1.3 Key words](#13-key-words)
    * [1.4 Terminology](#14-terminology)
-- [2 Certification](#2-certification)
+- [2 Compliance](#2-compliance)
    * [2.1 Compliance statement](#21-compliance-statement)
    * [2.2 Regulatory basis](#22-regulatory-basis)
    * [2.3 Traceability](#23-traceability)
@@ -52,7 +52,7 @@ leave it alone. Strip all three before submission to the EC catalogue.
    * [7.4 Embedded disclosure policy](#74-embedded-disclosure-policy)
 - [8 Revocation](#8-revocation)
 - [9 Presentation](#9-presentation)
-   * [9.1 Relying Party policy](#91-relying-party-policy)
+   * [9.1 Presentation Policy](#91-presentation-policy)
    * [9.2 Presentation modes](#92-presentation-modes)
    * [9.3 Transactional data](#93-transactional-data)
 - [10 Trust Framework](#10-trust-framework)
@@ -117,7 +117,7 @@ define. Do not restate ARF definitions.
 | --- | --- | --- |
 | | | |
 
-## 2 Certification
+## 2 Compliance
 
 Written last, although it appears first. Sections 2.1 and 2.2 are largely fixed by
 the legal category. Section 2.3 can only be completed once chapters 3 to 10 are
@@ -401,9 +401,9 @@ additions.
 > Regulations, and in [ETSI TS 119 471]. This Rulebook states only obligations
 > specific to this attestation type.
 
-[AUTHOR] List the attestation-specific obligations, each as a pointer to the section
-that states it, for example format obligations from chapter 5, selective disclosure
-rules from chapter 3, trust anchor publication from chapter 10.
+[AUTHOR] List the attestation-specific obligations, if any, each as a pointer to the
+section that states it, for example format obligations from chapter 5, selective
+disclosure rules from chapter 3, trust anchor publication from chapter 10.
 
 ### 7.3 Issuance Policy
 
@@ -442,16 +442,18 @@ Keep one branch and delete the other. Consortium default: TO AGREE.
 > other entities can retrieve the relevant lists at [DOMAIN OR URL]. The full
 > location relevant to an individual attestation is included in that attestation.
 
-[AUTHOR] State who may request revocation, on what grounds, and the expected time
-from trigger to status list update.
+[AUTHOR] State who may request revocation, and the grounds specific to this
+attestation type, in addition to any grounds already imposed by regulation. State the
+expected time from trigger to status list update.
 
 ## 9 Presentation
 
-### 9.1 Relying Party policy
+### 9.1 Presentation Policy
 
 FIXED
 
-> A Relying Party receiving an attestation of this type SHALL:
+> To verify and validate a received presentation of an attestation of this type,
+> the following steps SHALL be performed:
 >
 > 1. verify the signature over the attestation using a trust anchor obtained as
 >    described in chapter 10;
@@ -496,18 +498,13 @@ FIXED
 > of the ARF main document. The Provider may sign the attestation with an
 > intermediate signing certificate, in which case the trust anchor is used to verify
 > that certificate rather than the attestation directly.
->
-> For a PuB-EAA, a Relying Party Instance first verifies the Provider signature using
-> the Provider certificate issued by a QTSP, then verifies that certificate using the
-> corresponding trust anchor from the QTSP Trusted List. One or more extra
-> certificates are therefore involved compared with a PID or QEAA.
 
 **Non-qualified EAA**
 
 > The trust anchor is not obtained from a Trusted List of qualified trust service
-> providers. A Relying Party obtains it as follows: [CONSORTIUM DEFAULT MECHANISM,
-> TO AGREE]. It then verifies that the Provider is authorised to issue this
-> attestation type by [PROCEDURE].
+> providers. It is obtained as follows: [CONSORTIUM DEFAULT MECHANISM, TO AGREE].
+> Authorisation of the Provider to issue this attestation type is then verified by
+> [PROCEDURE].
 >
 > A Wallet Unit MAY verify Provider authorisation using the mechanism described in
 > ISSU_34 of Topic 10 of Annex 2 of the ARF.
