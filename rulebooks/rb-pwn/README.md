@@ -75,15 +75,15 @@ including:
 - Employee job duties abroad
 
 The attestation schema is designed to be sufficiently generic to cover national PWN requirements
-across EU Member States, verified against the requirements of **Spain** and **Netherlands** as
-representative examples.
+across EU Member States, verified against the requirements of The Netherlands as
+representative example.
 
 **Design Decisions**
 
 This PWN Attestation Rulebook is based on:
 - EU Directive 2014/67/EU — Posted Workers Enforcement Directive
 - Posting of Workers Directive (PWD) 96/71/EC as revised in 2018
-- National PWN portal requirements (Spain, Netherlands as reference implementations)
+- National PWN portal requirements (The Netherlands as reference implementation)
 - EUDI Wallet / eIDAS 2.0 framework for digital identity and verifiable attestations
 - ISO 3166-1 alpha-2 for country codes
 - ISO 8601 for date formatting
@@ -122,14 +122,14 @@ are intended as statements of fact.
 
 | **Term**                      | **Description**                                                                                                                                                                                          |
 |-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| PWN                           | Posted Worker Notification — an administrative requirement for companies providing intra-EU cross-border services with posted workers, filed with the host EU Member State authorities prior to service start |
-| Posted Worker                 | A citizen employed in one EU/EFTA member state ("sending state") who is temporarily sent to work in another member state ("receiving state") for a defined period                                         |
+| PWN                           | Posted Worker Notification — an administrative requirement for companies providing intra-EU cross-border services with posted workers, filed for every posted worker with the host EU Member State authorities prior to service start of the posted worker |
+| Posted Worker                 | A citizen employed in one EU member state ("sending state") who is temporarily sent to work and provide a service in another member state ("receiving state"), intra-company or at client site.                                          |
 | Home Employer                 | The legal employer in the sending state that employs the posted worker and is responsible for filing the PWN                                                                                               |
 | Host Company                  | The legal entity in the receiving/host member state that receives the posted worker's services                                                                                                             |
-| Sending State                 | The EU/EFTA member state where the home employer is established and from which the worker is posted                                                                                                        |
-| Receiving State               | The EU/EFTA member state where the posted worker temporarily performs work (host country)                                                                                                                  |
-| Administrative Representative | A designated person responsible for administrative PWN filings on behalf of the employer                                                                                                                  |
-| Social Representative         | A designated person responsible for social/labour matters related to the posting                                                                                                                           |
+| Sending State                 | The EU member state where the home employer is established and from which the worker is posted                                                                                                        |
+| Receiving State               | The EU member state where the posted worker temporarily performs work and provides service (host country)                                                                                                                  |
+| Administrative Representative | A contact person to liaise with the competent authorities in the host member state in which the services are provided                                                                                                                   |
+| Social Representative         | A contact person to act as a representative through whom the relevant social partners may seek to engage the service provider to enter into collective bargaining within the host Member State                                                                                                                          |
 | KYE                           | Know Your Employee — a due diligence scenario (Scenario 5 / BU1) enabling companies to verify employee identity and posting status in cross-border work situations                                        |
 | Employee Credential           | A credential issued by an employer to its employees certifying employment at a given point in time                                                                                                        |
 | PWD                           | Posting of Workers Directive — EU Directive 96/71/EC as revised in 2018, setting out labour law protection for posted workers                                                                             |
